@@ -1,5 +1,8 @@
 package com.vj.database.databasedemo.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.Entity;
 import java.util.Date;
 
 public class Person {
@@ -7,16 +10,17 @@ public class Person {
     private int id;
     private String name;
     private String location;
-    private Date date;
+
+    private Date birthDate;
 
     public Person() {
     }
 
-    public Person(int id, String name, String location, Date date) {
+    public Person(int id, String name, String location, Date birthDate) {
         this.id = id;
         this.name = name;
         this.location = location;
-        this.date = date;
+        this.birthDate = birthDate;
     }
 
     public int getId() {
@@ -43,21 +47,16 @@ public class Person {
         this.location = location;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getBirthDate() {
+        return birthDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
     @Override
     public String toString() {
-        return "\n Person{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", location='" + location + '\'' +
-                ", date=" + date +
-                '}';
+        return String.format("\nPerson [id=%s, name=%s, location=%s, birthDate=%s]", id, name, location, birthDate);
     }
 }
