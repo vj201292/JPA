@@ -60,5 +60,4 @@ public class PersonJdbcDao {
                         new Timestamp(person.getBirthDate().getTime()),
                         person.getId()});
     }
-
 }

@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.Date;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class DatabaseDemoApplication implements CommandLineRunner {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
